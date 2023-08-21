@@ -45,7 +45,7 @@ class CreateRentalUseCase {
             expected_return_date,
         );
 
-        if (compare < 24) throw new AppError("Invalid return time");
+        if (compare < 24) throw new AppError("Invalid return time!");
 
         const rental = await this.rentalsRepository.create({
             user_id,
